@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Verão</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #ffffff33;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #ffffff55;
+    }
+
+    .day-plan {
+      display: none;
+      width: 100%;
+      max-width: 480px;
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .meal {
+      background: #333;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+    }
+
+    .meal h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #fbc02d;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Projeto Verão</h1>
+  <div class="buttons">
+    <button onclick="showDay('segunda')">Segunda</button>
+    <button onclick="showDay('terca')">Terça</button>
+    <button onclick="showDay('quarta')">Quarta</button>
+    <button onclick="showDay('quinta')">Quinta</button>
+    <button onclick="showDay('sexta')">Sexta</button>
+    <button onclick="showDay('sabado')">Sábado</button>
+    <button onclick="showDay('domingo')">Domingo</button>
+  </div>
+
+  <!-- Planos de refeição por dia da semana -->
+  <div id="segunda" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>2 ovos cozidos</li>
+        <li>1 fatia de pão integral</li>
+        <li>1 banana</li>
+        <li>1 colher de chá de mel</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 iogurte desnatado</li>
+        <li>1 colher de sopa de aveia</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>120g de frango grelhado</li>
+        <li>2 colheres de sopa de arroz integral</li>
+        <li>1 concha de feijão</li>
+        <li>Salada verde com azeite</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 batata doce pequena</li>
+        <li>1 ovo cozido</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>100g de peixe grelhado</li>
+        <li>1 colher de sopa de purê de abóbora</li>
+        <li>Brócolis cozido</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="terca" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>1 omelete com 2 ovos e espinafre</li>
+        <li>1 fatia de pão integral</li>
+        <li>1 laranja</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 maçã</li>
+        <li>10 castanhas de caju</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>100g de carne moída magra</li>
+        <li>2 colheres de arroz integral</li>
+        <li>1 concha de lentilhas</li>
+        <li>Legumes refogados</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 banana com aveia</li>
+        <li>1 colher de pasta de amendoim</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>100g de frango desfiado</li>
+        <li>2 colheres de sopa de purê de mandioquinha</li>
+        <li>Alface e cenoura crua</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="quarta" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>2 fatias de pão integral</li>
+        <li>2 ovos mexidos</li>
+        <li>1 copo de suco natural de laranja</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 barra de proteína</li>
+        <li>Água de coco</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>120g de peito de frango grelhado</li>
+        <li>2 colheres de sopa de macarrão integral</li>
+        <li>Salada com azeite</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 banana com mel</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>100g de carne grelhada</li>
+        <li>Legumes assados</li>
+        <li>1 colher de arroz integral</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="quinta" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>1 omelete com 2 ovos e tomate</li>
+        <li>1 fatia de pão integral</li>
+        <li>1 fatia de melancia</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 iogurte natural</li>
+        <li>Granola sem açúcar</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>100g de filé de peixe grelhado</li>
+        <li>2 colheres de sopa de purê de batata</li>
+        <li>Legumes no vapor</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 banana e 5 amêndoas</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>Omelete com legumes</li>
+        <li>Salada crua</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="sexta" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>2 ovos cozidos</li>
+        <li>1 tapioca pequena com queijo branco</li>
+        <li>1 copo de suco de laranja</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 banana</li>
+        <li>1 colher de aveia</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>120g de carne grelhada</li>
+        <li>Arroz integral</li>
+        <li>Feijão preto</li>
+        <li>Salada</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>Batata doce cozida</li>
+        <li>1 ovo</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>100g de frango grelhado</li>
+        <li>Salada com azeite</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="sabado" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>Omelete com 2 ovos e espinafre</li>
+        <li>1 fatia de pão integral</li>
+        <li>1 fatia de mamão</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 iogurte com chia</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>120g de frango grelhado</li>
+        <li>Arroz integral</li>
+        <li>Salada verde</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 banana com mel</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>Peixe grelhado</li>
+        <li>Legumes refogados</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="domingo" class="day-plan">
+    <div class="meal">
+      <h2>Café da Manhã</h2>
+      <ul>
+        <li>2 ovos mexidos</li>
+        <li>1 fatia de pão integral</li>
+        <li>1 copo de suco natural</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Lanche da Manhã</h2>
+      <ul>
+        <li>1 barra de cereal</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Almoço</h2>
+      <ul>
+        <li>100g de carne grelhada</li>
+        <li>Arroz integral</li>
+        <li>Feijão</li>
+        <li>Legumes cozidos</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Pré-Treino</h2>
+      <ul>
+        <li>1 banana com aveia</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h2>Jantar</h2>
+      <ul>
+        <li>Frango grelhado</li>
+        <li>Salada com azeite</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showDay(dayId) {
+      const plans = document.querySelectorAll('.day-plan');
+      plans.forEach(plan => plan.style.display = 'none');
+      document.getElementById(dayId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
